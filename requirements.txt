@@ -1,3 +1,5 @@
-opencv-python
-mediapipe
+opencv-contrib-python==4.11.0.86
+mediapipe==0.10.21
+numpy==1.26.4
+protobuf==4.25.9
 pyautogui
