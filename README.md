@@ -1,14 +1,16 @@
-
-# Media Control Using Hand Gestures
+# Hand Gesture Based Media Control System
 
 ## Project Overview
-A Python-based computer vision project that allows users to control media playback using hand gestures through a webcam.
+A Python-based computer vision application that allows users to control media playback using hand gestures in real time through a webcam.
+
+The system detects hand landmarks and counts raised fingers to perform keyboard actions automatically.
 
 ## Features
-- Real-time hand detection
-- Finger counting using hand landmarks
-- Media playback control using gestures
-- Webcam-based interaction
+- Real-time hand detection using webcam
+- Finger counting and gesture recognition
+- Media playback control using hand gestures
+- Keyboard automation
+- Single-hand gesture detection
 
 ## Technologies Used
 - Python
@@ -18,20 +20,20 @@ A Python-based computer vision project that allows users to control media playba
 
 ## Gesture Controls
 
-| Fingers Detected | Action |
+| Hand Gesture | Keyboard Action |
 |---|---|
-| 1 Finger | Forward |
-| 2 Fingers | Backward |
-| 3 Fingers | Volume Up |
-| 4 Fingers | Volume Down |
-| 5 Fingers | Play / Pause |
+| 1 Finger | Right Arrow |
+| 2 Fingers | Left Arrow |
+| 3 Fingers | Up Arrow |
+| 4 Fingers | Down Arrow |
+| 5 Fingers | Space |
 
 ## Installation
 
-Install the required libraries:
+Install the required dependencies:
 
 ```bash
-pip install opencv-python mediapipe pyautogui
+pip install -r requirements.txt
 ```
 
 ## How to Run
@@ -40,10 +42,20 @@ pip install opencv-python mediapipe pyautogui
 python main.py
 ```
 
-Make sure your webcam is connected.
+Allow webcam access and show hand gestures in front of the camera.
+
+Press ESC to exit the application.
+
+## How It Works
+1. OpenCV captures live webcam frames.
+2. MediaPipe detects hand landmarks.
+3. The program counts raised fingers.
+4. Each recognized gesture is mapped to a keyboard command.
+5. PyAutoGUI executes the corresponding keyboard action.
 
 ## Original Project Credit
 
-Original repository: https://github.com/sg-0x/Media-contol-using-gestures
+Original repository:
+https://github.com/sg-0x/Media-contol-using-gestures
 
-This repository retains the original MIT license.
+Original MIT License retained.
